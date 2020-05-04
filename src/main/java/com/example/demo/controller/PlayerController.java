@@ -18,8 +18,8 @@ public class PlayerController {
     PlayerRepository playerRepository;
 
     /**
-     * Am folosit get mapping pentru a mapa path-ul /all cu metoda getAll(). Functia findAll() din interiorul metodei este
-     * apelate metoda finAll() oferita de JpaRepository. FindAll() returneaza o lista cu toti jucatorii din baza de date.
+     * Am folosit get mapping pentru a mapa path-ul /all cu metoda getAll(). Metoda findAll() apelata in interiorul metodei curente
+     * este oferita de JpaRepository. FindAll() returneaza o lista cu toti jucatorii din baza de date.
      * @return List<Player> lista de jucatori din baza de date
      */
     @GetMapping("/all")
