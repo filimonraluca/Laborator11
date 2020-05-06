@@ -1,9 +1,6 @@
 package com.example.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Clasa Player este o entitate reprezentand tabela cu acelasi nume din baza de date. Coloana id este primary key si auto generata.
@@ -12,11 +9,20 @@ import javax.persistence.Id;
  */
 
 @Entity
+@Table(name = "player")
 public class Player {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "name")
     private String name;
+
+    public Player() {
+    }
+
+    public Player(String name) {
+        this.name = name;
+    }
 
     public int getId() {
         return id;
